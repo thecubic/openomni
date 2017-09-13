@@ -25,9 +25,12 @@ One of the following.  If you use the TI stick, you will need to flash firmware 
 Prerequisites:
 * python 2.7
 * [pip](https://pip.readthedocs.io/en/stable/installing/)
-* [rfcat](https://bitbucket.org/atlas0fd00m/rfcat)
+* [rfcat](https://github.com/atlas0fd00m/rfcat)
 * PyUSB - you can install this with pip: `pip install pyusb`, or `sudo pip install pyusb`
-* On mac, you'll need libusb. `brew install libusb`
+* On mac, you'll need libusb. `brew install libusb` (If you don't have Homebrew installed, go here first: https://brew.sh/)
+* Tip: You may need to install the dateutil package at https://pypi.python.org/pypi/python-dateutil. Extract it to somewhere and run the command:
+
+python setup.py install
 
 You can install openomni in editable mode like this:
 ```
@@ -36,6 +39,14 @@ cd openomni
 pip install -e .
 ```
 ** Note: You may need to add 'sudo' before the pip install line if you are using a system python install.
+
+** Note: You can capture packets by plugging an RFCat into a USB port -- then go to the command line, and navigate to this directory:
+/openomni/bin/  and type:
+
+omni_listen_rfcat
+
+Then issue commands from your PDM and they'll appear at the command line.
+
 
 =======
 ##### ** Please note the details below are related to a project created to better understand how the omnipod communicates **
